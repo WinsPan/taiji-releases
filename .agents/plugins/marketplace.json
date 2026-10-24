@@ -1,0 +1,6 @@
+{
+  "name": "taiji",
+  "plugins": [
+    { "name": "taiji", "source": { "source": "local", "path": "./" }, "policy": { "installation": "AVAILABLE" }, "category": "Developer Tools" }
+  ]
+}
