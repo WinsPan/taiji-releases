@@ -1,0 +1,16 @@
+{
+  "description": "taiji：工具调用前风险评估（破坏性拒绝、可疑询问）；工具返回扫描写给 AI 的指令；记录用户要求供相关性判断。判断由本机 taiji 二进制完成，不联网。",
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit|WebFetch|mcp__.*",
+        "hooks": [ { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/plugin/bin/taiji-hook.sh\"", "timeout": 25, "statusMessage": "taiji：评估工具调用" } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Bash|WebFetch|WebSearch|Read|mcp__.*",
+        "hooks": [ { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/plugin/bin/taiji-hook.sh\"", "timeout": 25, "statusMessage": "taiji：扫描工具返回" } ] }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/plugin/bin/taiji-hook.sh\"", "timeout": 5 } ] }
+    ]
+  }
+}
