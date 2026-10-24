@@ -1,0 +1,12 @@
+{
+  "name": "taiji",
+  "version": "0.2.0",
+  "description": "本地决策守卫与 Taiji 代理入口：工具调用前风险评估、工具结果提示注入扫描，不调用任何外部服务。",
+  "author": { "name": "WinsPan" },
+  "license": "MIT",
+  "homepage": "https://github.com/WinsPan/taiji-releases",
+  "repository": "https://github.com/WinsPan/taiji-releases",
+  "keywords": ["security", "guard", "prompt-injection", "agent"],
+  "hooks": "./plugin/hooks.json",
+  "skills": "./plugin/skills"
+}
