@@ -32,3 +32,12 @@ taiji update   # 升级到最新版（--check 只检查）
 每个包旁边有同名 `.sha256` 与 `.sig`（ed25519 发布签名）。安装脚本总会校验 sha256，
 本机 openssl 支持 ed25519 时（`brew install openssl@3`）同时校验签名；`taiji update` 始终校验签名，
 经加速镜像下载而没有有效签名时拒绝安装。
+
+## 插件
+
+```sh
+claude plugin marketplace add WinsPan/taiji-releases && claude plugin install taiji@taiji   # Claude Code
+codex plugin marketplace add WinsPan/taiji-releases                                         # Codex
+```
+
+插件的 hook 调本机 `taiji decide --hook`：工具调用前评估风险、工具返回扫描写给 AI 的指令，全部在本机完成。
