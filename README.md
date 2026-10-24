@@ -29,4 +29,6 @@ taiji update   # 升级到最新版（--check 只检查）
 
 ## 校验
 
-每个包旁边有同名 `.sha256`，安装脚本会自动校验。
+每个包旁边有同名 `.sha256` 与 `.sig`（ed25519 发布签名）。安装脚本总会校验 sha256，
+本机 openssl 支持 ed25519 时（`brew install openssl@3`）同时校验签名；`taiji update` 始终校验签名，
+经加速镜像下载而没有有效签名时拒绝安装。
