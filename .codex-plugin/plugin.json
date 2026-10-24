@@ -1,0 +1,16 @@
+{
+  "name": "taiji",
+  "version": "0.2.0",
+  "description": "本地决策守卫与 Taiji 代理入口：工具调用前风险评估、工具结果提示注入扫描，不调用任何外部服务。",
+  "author": { "name": "WinsPan" },
+  "license": "MIT",
+  "hooks": "./plugin/hooks.codex.json",
+  "interface": {
+    "displayName": "Taiji Guard",
+    "shortDescription": "本地风险评估与注入扫描，零 API key",
+    "longDescription": "每次工具调用前由本机 taiji 评估风险（破坏性操作拒绝、可疑操作提示确认）；每个工具返回扫描写给 AI 的指令并标为不可信。全部判断在本机完成。",
+    "developerName": "WinsPan",
+    "category": "Developer Tools",
+    "capabilities": ["Lifecycle hooks", "Security"]
+  }
+}
