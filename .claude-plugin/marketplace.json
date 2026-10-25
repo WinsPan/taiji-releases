@@ -3,6 +3,6 @@
   "owner": { "name": "WinsPan" },
   "description": "Taiji：本地决策守卫（替代需要 API key 的 jev-guard）与 Taiji 代理入口。",
   "plugins": [
-    { "name": "taiji", "source": "./", "description": "工具调用前风险评估、工具结果注入扫描；本机 taiji 二进制完成判断。", "version": "0.2.9", "category": "security" }
+    { "name": "taiji", "source": "./", "description": "工具调用前风险评估、工具结果注入扫描；本机 taiji 二进制完成判断。", "version": "0.2.10", "category": "security" }
   ]
 }
