@@ -1,6 +1,6 @@
 {
   "name": "taiji",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "本地决策守卫与 Taiji 代理入口：工具调用前风险评估、工具结果提示注入扫描，不调用任何外部服务。",
   "author": { "name": "WinsPan" },
   "license": "MIT",
