@@ -14,6 +14,8 @@ curl -fsSL https://github.com/WinsPan/taiji-releases/releases/latest/download/in
 curl -fsSL https://gh-proxy.com/https://github.com/WinsPan/taiji-releases/releases/latest/download/install.sh | TAIJI_GH_PROXY_ONLY=1 sh
 ```
 
+> 加速地址由第三方运营：安装脚本本身经它下载，不受发布签名保护（二进制仍会验签）。能直连 GitHub 时请用上面的地址。
+
 直连 GitHub 失败时安装脚本与 `taiji update` 也会自动改走加速地址；`TAIJI_GH_PROXY` 可换成别的加速前缀。
 
 目前提供 Apple 芯片（M 系列）的 macOS 版本，装到 `~/.local/bin`。可用 `TAIJI_INSTALL_DIR` 改目录、
